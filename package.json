@@ -39,7 +39,15 @@
     "deep-extend": "^0.2.8",
     "charm": "^0.2.0"
   },
-  "keywords": [],
+  "keywords": [
+    "browserify",
+    "webpack",
+    "browserify-plugin"
+  ],
+  "files": [
+    "LICENSE-MIT",
+    "index.js"
+  ],
   "webpackify": {
     "output": {
       "publicPath": "../tmp/"
