@@ -9,7 +9,7 @@ Using this plugin, you can make Browserify:
 * Use AMD modules and they actually load asynchronously
 * Load any kind of resource CSS, images, fonts, Stylus, LESS, Handlebars, etc as a module
 * Split your bundles into chunks that load asynchronously
-* Resolve modules from custom folders, ie: `['node_modules', 'bower_components', 'jamjs', 'etc']`
+* Resolve modules from custom folders, ie: `['node_modules', 'bower_components', 'src/vendor', 'etc']`
 * Dynamically `require('./langs/' + language + '.js')` modules
 
 ...and almost everything else webpack does as webpack is just another node module that compiles modules, so why not?
