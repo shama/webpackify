@@ -38,6 +38,8 @@ require('style!css!./css/style.css')
 var css = require('css!./css/style.css')
 ```
 
+Both `@import()` and `url()` statements within your CSS will resolve as modules too.
+
 ### Resolve modules from custom folders
 
 Configure the module folders through the `webpackify` key in your `package.json`:
@@ -54,6 +56,27 @@ Configure the module folders through the `webpackify` key in your `package.json`
 ```
 
 and now calls to `require('a-module')` will first search `node_modules/a-module`, then `bower_components/a-module` and finally `src/vendor/a-module` before giving up.
+
+### Load miscellaneous resources as modules
+
+Install the [url-loader](https://github.com/webpack/url-loader) with: `npm install url-loader --save-dev`
+
+Configure the loader to run on certain files in your `package.json`:
+
+``` json
+{
+  "name": "mypackage",
+  "webpackify": {
+    "module": {
+      "loaders": [
+        { "test": "\.(png|svg|woff|eot|ttf|otf)$", "loader": "url?limit=100000" }
+      ]
+    }
+  }
+}
+```
+
+Now any file you load that ends with one of the above file extensions will be inlined if under 100k and loaded async if above 100k.
 
 ## Usage
 
