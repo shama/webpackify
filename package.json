@@ -1,0 +1,48 @@
+{
+  "name": "webpackify",
+  "description": "A browserify transform that runs modules through webpack",
+  "version": "0.1.0",
+  "homepage": "https://github.com/shama/webpackify",
+  "author": {
+    "name": "Kyle Robinson Young",
+    "email": "kyle@dontkry.com",
+    "url": "http://dontkry.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shama/webpackify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shama/webpackify/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/shama/webpackify/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "rm -rf tmp && mkdir tmp && browserify test/entry.js -o tmp/bundle.js -p [ ./ ] && open test/index.html"
+  },
+  "devDependencies": {
+    "browserify": "^3.38.0",
+    "css-loader": "^0.6.12",
+    "style-loader": "^0.6.3"
+  },
+  "dependencies": {
+    "webpack": "^1.1.3",
+    "through": "^2.3.4",
+    "xtend": "^2.2.0",
+    "deep-extend": "^0.2.8",
+    "charm": "^0.2.0"
+  },
+  "keywords": [],
+  "webpackify": {
+    "output": {
+      "publicPath": "../tmp/"
+    }
+  }
+}
