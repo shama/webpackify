@@ -160,6 +160,7 @@ npm install webpackify
 
 ## release history
 
+* 0.1.1 - readme and test updates
 * 0.1.0 - initial release
 
 ## license
