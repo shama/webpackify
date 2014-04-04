@@ -1,6 +1,6 @@
 # webpackify
 
-> Use [webpack](http://webpack.github.io/docs/) through a [Browserify](browserify.org) plugin
+> Use [webpack](http://webpack.github.io/docs/) through a [Browserify](http://browserify.org) plugin
 
 ## Features
 

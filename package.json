@@ -1,6 +1,6 @@
 {
   "name": "webpackify",
-  "description": "A browserify transform that runs modules through webpack",
+  "description": "Use webpack through a Browserify plugin",
   "version": "0.1.0",
   "homepage": "https://github.com/shama/webpackify",
   "author": {
